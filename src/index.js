@@ -11,4 +11,10 @@ function page(){
     root.appendChild(footer());
 }
 
+export function changeView(component){
+    let contentContainer = document.getElementById("content");
+    contentContainer.innerHTML = "";
+    contentContainer.appendChild(component);
+}
+
 page();

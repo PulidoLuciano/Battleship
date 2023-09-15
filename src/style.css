@@ -53,6 +53,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--fontColor);
 }
 
 button{
@@ -72,4 +73,24 @@ button:hover{
 #start-button{
     font-size: 2.5rem;
     padding: 30px;
+}
+
+.flex{
+    display: flex;
+    gap: 30px;
+}
+
+h2{
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+#choose{
+    text-align: center;
+}
+
+.mode-button{
+    height: 250px;
+    width: 250px;
+    font-size: 2.5rem;
 }
