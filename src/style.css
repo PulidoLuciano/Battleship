@@ -5,6 +5,7 @@
     box-sizing: border-box;
     --backgroundColor: #111111;
     --navColor: #00ee00;
+    --fontColor: #dddddd;
 }
 
 #root{
@@ -35,4 +36,14 @@ header{
 
 .nav-button:hover{
     color: #333333;
+}
+
+footer{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    color: var(--fontColor);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
 }

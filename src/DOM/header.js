@@ -13,6 +13,7 @@ export default function header(){
     creditsButton.innerHTML = "Credits";
     creditsButton.classList.add("nav-button");
     creditsButton.setAttribute("href", "https://www.instagram.com/pulidoluciano");
+    creditsButton.setAttribute("target", "_blank");
 
     headerContainer.appendChild(creditsButton);
     headerContainer.appendChild(h1Title);
