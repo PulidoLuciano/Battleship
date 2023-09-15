@@ -1,0 +1,38 @@
+*{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    --backgroundColor: #111111;
+    --navColor: #00ee00;
+}
+
+#root{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--backgroundColor);
+}
+
+header{
+    width: 100vw;
+    background-color: var(--navColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+#nav-title{
+    font-size: 3rem;
+}
+
+.nav-button{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--backgroundColor);
+    font-weight: 800;
+}
+
+.nav-button:hover{
+    color: #333333;
+}
