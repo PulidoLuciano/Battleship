@@ -1,9 +1,11 @@
+import Player from "./Player";
+
 class Game{
     constructor(playerOne, playerTwo){
-        this.playerOne = playerOne;
-        this.playerTwo = playerTwo;
+        this.playerOne = new Player(playerOne);
+        this.playerTwo = new Player(playerTwo);
         this.current = {
-            player : playerOne,
+            player : this.playerOne,
             hasAttacked : false,
         };
     }
@@ -21,3 +23,5 @@ class Game{
         }
     }
 }
+
+export default Game;

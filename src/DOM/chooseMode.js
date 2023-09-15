@@ -1,3 +1,6 @@
+import { changeView } from "../index";
+import nameLocalPlayers from "./Local/nameLocalPlayers";
+
 function chooseMode(){
     let container = document.createElement("div");
     container.setAttribute("id", "choose")
@@ -36,7 +39,7 @@ function iaHandler(){
 }
 
 function localHandler(){
-
+    changeView(nameLocalPlayers());
 }
 
 function onlineHandler(){
