@@ -10,7 +10,7 @@ export default function header(){
     restartButton.classList.add("nav-button");
 
     let creditsButton = document.createElement("a");
-    creditsButton.innerHTML = "Credits";
+    creditsButton.innerHTML = "Instagram";
     creditsButton.classList.add("nav-button");
     creditsButton.setAttribute("href", "https://www.instagram.com/pulidoluciano");
     creditsButton.setAttribute("target", "_blank");

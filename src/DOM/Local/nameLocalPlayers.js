@@ -1,4 +1,6 @@
 import Game from "../../Domain/Game";
+import {changeView} from "../../index";
+import changeTurn from "./changeTurn";
 
 function nameLocalPlayers(){
     let nameLocalcontainer = document.createElement("div");
@@ -37,7 +39,7 @@ function confirmHandler(){
     let nameTwo = document.getElementById("PlayerTwoName").value;
 
     let game = new Game(nameOne, nameTwo);
-    console.log(game);
+    changeView(changeTurn(game));
 }
 
 export default nameLocalPlayers;
