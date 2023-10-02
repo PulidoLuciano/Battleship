@@ -6,13 +6,24 @@ class Game{
         this.playerTwo = new Player(playerTwo);
         this.current = {
             player : this.playerOne,
+            rival: this.playerTwo,
             hasAttacked : false,
         };
     }
 
     nextTurn(){
-        if(this.current.player === this.playerOne) this.current = this.playerTwo;
-        this.current.player = this.playerOne;
+        if(this.current.player === this.playerOne) 
+            this.current = {
+                player : this.playerTwo,
+                rival: this.playerOne,
+                hasAttacked : false,
+            };
+        else
+            this.current = {
+                player : this.playerOne,
+                rival: this.playerTwo,
+                hasAttacked : false,
+            };
     }
 
     attack(row, column){

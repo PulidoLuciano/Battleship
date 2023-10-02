@@ -139,3 +139,16 @@ input{
     padding: 10px;
     font-size: 24px;
 }
+
+.boat{
+    background-color: coral;
+}
+
+.unshooted-cell{
+    background-color: rgb(108, 160, 255);
+    cursor: pointer;
+}
+
+.unshooted-cell:hover{
+    background-color: rgb(119, 166, 253);
+}

@@ -22,6 +22,20 @@ export default function localGame(game){
     
     let divCurrentBoard = document.createElement("div");
     divCurrentBoard.classList.add("board");
+    for(let i = 0; i < 10; i++){
+        for(let j = 0; j < 10; j++){
+            let info = game.current.player.board.rows[i][j];
+            let cell = document.createElement("div");
+            cell.classList.add("board-square");
+            if(info.boat){
+                cell.classList.add("boat");
+            }
+            if(info.shooted){
+                cell.innerHTML = "X";
+            }
+            divCurrentBoard.appendChild(cell);
+        }
+    }
     current.appendChild(divCurrentBoard);
     
     let h2Rival = document.createElement("h2");
@@ -30,6 +44,22 @@ export default function localGame(game){
     
     let divRivalBoard = document.createElement("div");
     divRivalBoard.classList.add("board");
+    for(let i = 0; i < 10; i++){
+        for(let j = 0; j < 10; j++){
+            let info = game.current.rival.board.rows[i][j];
+            let cell = document.createElement("div");
+            cell.classList.add("board-square");
+            if(info.shooted){
+                cell.innerHTML = "X";
+                if(info.boat){
+                cell.classList.add("boat");
+                }
+            }else{
+                cell.classList.add("unshooted-cell");
+            }
+            divRivalBoard.appendChild(cell);
+        }
+    }
     rival.appendChild(divRivalBoard);
 
     let button = document.createElement("button");

@@ -4,6 +4,7 @@ class Player{
     constructor(name){
         this.name = name;
         this.board = new Board();
+        this.board.placeShip("submarine", 1, 0, 0);
     }
 
     attack(row, column, opponentBoard){
