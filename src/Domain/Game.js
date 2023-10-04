@@ -28,10 +28,15 @@ class Game{
 
     attack(row, column){
         let opponent = (this.current.player === this.playerOne) ? this.playerTwo : this.playerOne;
-        if(this.current.hasAttacked) {
-            this.current.hasAttacked = true;
-            return this.current.player.attack(row, column, opponent.board);
+        if(!this.current.hasAttacked) {
+            if(!this.current.player.attack(row, column, opponent.board) || this.hasEnded()) this.current.hasAttacked = true;
         }
+    }
+
+    hasEnded(){
+        if(!(this.playerOne.hasLost() || this.playerTwo.hasLost())) return null;
+        if(this.playerOne.hasLost()) return this.playerTwo;
+        return this.playerOne;
     }
 }
 

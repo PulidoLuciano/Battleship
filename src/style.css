@@ -127,12 +127,18 @@ input{
     min-width: 500px;
     background-color: cornflowerblue;
     display: grid;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(10, auto);
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
 }
 
 .board-square{
     outline: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    font-size: 32px;
+    user-select: none;
 }
 
 #next-button{
@@ -151,4 +157,15 @@ input{
 
 .unshooted-cell:hover{
     background-color: rgb(119, 166, 253);
+}
+
+.sunken{
+    background-color: red;
+}
+
+.win-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -76,10 +76,8 @@ class Board{
 
     receiveAttack(row, column){
         if(this.rows[row][column].shooted) throw new Error("That cells was shooted before");
-        if(this.rows[row][column].boat == null){
-            this.rows[row][column].shooted = true;
-            return false;
-        }
+        this.rows[row][column].shooted = true;
+        if(this.rows[row][column].boat == null) return false;
         this.rows[row][column].boat.hit();
         return true;
     }

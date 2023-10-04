@@ -4,8 +4,9 @@ import "./style.css";
 import start from "./DOM/start";
 import content from "./DOM/content";
 
-function page(){
+export function page(){
     let root = document.getElementById("root");
+    root.innerHTML = "";
     root.appendChild(header());
     root.appendChild(content(start()));
     root.appendChild(footer());

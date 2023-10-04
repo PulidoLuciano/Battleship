@@ -1,3 +1,5 @@
+import { page } from "..";
+
 export default function header(){
     let headerContainer = document.createElement("header");
 
@@ -8,6 +10,7 @@ export default function header(){
     let restartButton = document.createElement("a");
     restartButton.innerHTML = "Restart";
     restartButton.classList.add("nav-button");
+    restartButton.addEventListener("click", handlerRestart);
 
     let creditsButton = document.createElement("a");
     creditsButton.innerHTML = "Instagram";
@@ -20,4 +23,8 @@ export default function header(){
     headerContainer.appendChild(restartButton);
     
     return headerContainer;
+}
+
+function handlerRestart(){
+    page();
 }
