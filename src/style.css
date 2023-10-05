@@ -169,3 +169,21 @@ input{
     justify-content: center;
     align-items: center;
 }
+
+#place-board{
+    display: flex;
+    gap: 30px;
+}
+
+#place-inputs{
+    display: flex;
+}
+
+form input{
+    max-width: 30px;
+    text-align: center;
+}
+
+.place-button{
+    display: inline;
+}
